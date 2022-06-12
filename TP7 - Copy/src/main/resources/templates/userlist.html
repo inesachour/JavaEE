@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Users List</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div>
+		<div>
+			<h2>Users List</h2>
+			<div class="table-responsive">
+				<table class="table" id="product-table">
+					<thead>
+						<tr>
+							<th>Login</th>
+							<th>Password</th>
+							<th>Mail</th>
+							<th>Ville</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="user : ${users}">
+							<td><a th:text="${user.login}"
+								th:href="@{'/user/' + ${user.idUser}}"></a></td>
+							<td th:text="${user.pass}"></td>
+							<td th:text="${user.mail}"></td>
+							<td th:text="${user.ville}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

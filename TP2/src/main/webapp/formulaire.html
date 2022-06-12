@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="get" action="ServletTraitement">
+		<h3>Nom</h3>
+		<input type="text" name="nom">
+		<h3>Prenom</h3>
+		<input type="text" name="prenom">
+		
+		<h3>Sexe</h3>
+		Homme: <INPUT type="radio" name="sexe" value="M" checked>
+		Femme : <INPUT type="radio" name="sexe" value="F">
+		
+		<h3>Fonction</h3>
+		<SELECT name="fonction">
+		<OPTION VALUE="Etudiant" selected="selected">Etudiant</OPTION>
+		<OPTION VALUE="Ingenieur">Ingenieur</OPTION>
+		<OPTION VALUE="Enseignant">Enseignant</OPTION>
+		<OPTION VALUE="Retraité">Retraite</OPTION>
+		<OPTION VALUE="autre">Autre</OPTION>
+		</SELECT>
+		
+		<h3>Loisirs</h3>
+		<INPUT type="checkbox" name ="loisirs" value="Lecture">Lecture
+		<INPUT type="checkbox" name ="loisirs" value="Sport">Sport
+		<INPUT type="checkbox" name ="loisirs" value="Voyage">Voyage
+		
+		<br>
+		<INPUT type="submit" value="Envoyer">
+	</form>
+</body>
+</html>

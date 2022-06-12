@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Show Product</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div style="margin-left: 50px">
+		<div>
+			<h3>
+				<a href="/userlist" class="btn btn-primary"><span
+					class="glyphicon glyphicon-list"></span>Users</a>
+			</h3>
+			<h2 th:text="${user.login}"></h2>
+			<dl class="list">
+				<dt>Email</dt>
+				<dd th:text="${user.mail}"></dd>
+				<dt>Password</dt>
+				<dd th:text="${user.pass}"></dd>
+				<dt>Ville</dt>
+				<dd th:text="${user.ville}"></dd>
+			</dl>
+			<form action="/delete">
+				<input type="hidden" name="id" th:value="${user.idUser}" />
+				<h2>
+					<a th:href="@{'/delete/' + ${user.idUser}}" class="btn btn-warning">Delete</a>
+					<a th:href="@{'/edit/' + ${user.idUser}}" class="btn btn-warning">Edit</a>
+				</h2>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
